@@ -453,6 +453,12 @@ $(document).ready(function() {
 				createStory(currentTitle);
 			}
 		}
+
+		$(".items-item").each(function() {
+			var checkbox = $(this).find("input");
+			checkbox.prop("checked", false);
+		});
+		cleanupItems();
 	});
 
 	$("#btn_delete").click(function(){
